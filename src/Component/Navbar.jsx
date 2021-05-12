@@ -59,7 +59,7 @@ const Navbar = () => {
         <AppBar position="fixed">
         <Toolbar className={classes.navbar}>
             <Container maxWidth="xl" className={classes.navbarDisplayFlex}>
-              <span className={classes.logo}>JAZZBAT</span>
+              <span className={classes.logo}>JAZBAAT</span>
             <Hidden smDown>
                 <Grid className={classes.navbarButton} justify="flex-end">
                     <Button className={classes.button} color="secondary">

@@ -19,7 +19,8 @@ const Layout = () => {
             <Grid container xs={12} className="intro-text" justify="center" alignContent="center">
                 <Grid item xs={11}>
                     <Typography variant="h1" style={{color:"#FFC900"}}>
-                        Jazzbat
+                        Jazbaat
+                        
                     </Typography>
                 </Grid>
                 
