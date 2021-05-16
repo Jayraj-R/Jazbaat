@@ -14,7 +14,7 @@ const ParallaxQuotes = () => {
         <div>
             <Parallax strength={500}>
                 <Background className="custom-bg">
-                    <section style={{width:"100vw"}} className="main-image"></section>
+                    <section style={{width:"100vw"}} className="bg-image"></section>
                 </Background>
                 <Grid xs={12} container justify="center" className={classes.container}>
                     <Grid xs={11} sm={6}>

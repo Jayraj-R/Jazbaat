@@ -5,23 +5,27 @@ import eventNukkad from '../media/eventNukkad.JPG'
 import eventStagePlay    from '../media/eventStage.png'
 import eventMonoact from '../media/eventMonoact.JPG'
 import ParallaxHeader from './ParallaxHeader'
+
 const useStyles = makeStyles({
     root:{
         position:"relative",
-        background:"yellow",
-        padding:"5em 0em",
+        padding:"5em 0em",  
+        background: "#4a4a4a "
     },
     header:{
         position:"absolute",
         height:"100%",
-        background:"red",
         width:"auto",
         zIndex:1,
-        left:0
+        left:0,
+        textAlign:"center",'@media only screen and (max-width : 1199px)': {
+            left:"auto",
+        },
     },
     cards:{
         position:"relative",
-        zIndex:2
+        zIndex:2,
+        margin:"2em 0em"
     }
 });
 
@@ -52,11 +56,11 @@ const Events = () => {
 
     return (
         <Grid container xs={12} className={classes.root} justify="center" alignContent="center">
-            <Grid container xs={12} justify="left" className={classes.header}>
+            <Grid container xs={12} sm={8} justify="center" className={classes.header}>
                 <span>
                     <ParallaxHeader
-                        title="About"
-                        duration="1425"
+                        title="Events"
+                        duration="2295"
                         to="24em"
                     /> 
                 </span>

@@ -10,6 +10,7 @@ import {
 import {ThemeProvider} from '@material-ui/core/styles'
 import { makeStyles } from "@material-ui/core";
 import Sidebar from "./Sidebar";
+import text from '../media/text.png'
 import '../App.css';
 
 const useStyles = makeStyles({
@@ -36,7 +37,7 @@ const useStyles = makeStyles({
     position:"relative",
     top:-10,
     marginBottom:-10,
-    color:"#FEF9EE",
+    color:"white",
     transform:'scaleX(0)',
     transformOrigin:"right",
     transition:"transform 250ms ease-in"
@@ -46,7 +47,14 @@ const useStyles = makeStyles({
     color:"#FEF9EE"
   },
   logo: {
-    fontSize:"3em"
+    height:"4em",
+    '@media only screen and (max-width : 767px)': {
+      height:"2.5em",
+      marginBottom:"0.5em"
+    },
+    '@media only screen and (max-width : 964px)': {
+      height:"3em"
+    }
   }
 });
 
@@ -59,27 +67,41 @@ const Navbar = () => {
         <AppBar position="fixed">
         <Toolbar className={classes.navbar}>
             <Container maxWidth="xl" className={classes.navbarDisplayFlex}>
-              <span className={classes.logo}>JAZBAAT</span>
+              <a href="#start" className={classes.links}><img  className={classes.logo} src={text}/></a>
             <Hidden smDown>
                 <Grid className={classes.navbarButton} justify="flex-end">
+                  <a href="#events" className={classes.links}>
                     <Button className={classes.button} color="secondary">
                       <span style={{ letterSpacing: 5}}>
-                        <a href="#about" className={classes.links}>About</a>
+                        Events
                         <hr className={classes.underline}/>
                       </span>
                     </Button>
+                  </a>
+                  <a href="#gallery" className={classes.links}>
                     <Button className={classes.button} color="secondary">
                       <span style={{ letterSpacing: 5}}>
-                      <a href="#work" className={classes.links}>Work</a>
+                        Gallery
                         <hr className={classes.underline}/>
                       </span>
                     </Button>
+                  </a>
+                  <a href="#teams" className={classes.links}>
                     <Button className={classes.button} color="secondary">
-                      <span style={{ letterSpacing: 5}}>
+                      <span style={{ letterSpacing: 4}}>
+                        Team
+                        <hr className={classes.underline}/>
+                      </span>
+                    </Button>
+                  </a>
+                  <a href="#contact" className={classes.links}>
+                    <Button className={classes.button} color="secondary">
+                      <span style={{ letterSpacing: 4}}>
                         Contact
                         <hr className={classes.underline}/>
                       </span>
                     </Button>
+                  </a>
                 </Grid>
             </Hidden>
             <Hidden mdUp>
