@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/Jazbaat/static/css/main.d89d0fb1.chunk.css",
-    "main.js": "/Jazbaat/static/js/main.8c6c2ab4.chunk.js",
-    "main.js.map": "/Jazbaat/static/js/main.8c6c2ab4.chunk.js.map",
-    "runtime-main.js": "/Jazbaat/static/js/runtime-main.04c6795a.js",
-    "runtime-main.js.map": "/Jazbaat/static/js/runtime-main.04c6795a.js.map",
+    "main.css": "/Jazbaat/static/css/main.cdd40445.chunk.css",
+    "main.js": "/Jazbaat/static/js/main.07dc2f3a.chunk.js",
+    "main.js.map": "/Jazbaat/static/js/main.07dc2f3a.chunk.js.map",
+    "runtime-main.js": "/Jazbaat/static/js/runtime-main.cfe67f0b.js",
+    "runtime-main.js.map": "/Jazbaat/static/js/runtime-main.cfe67f0b.js.map",
     "static/css/2.150d169a.chunk.css": "/Jazbaat/static/css/2.150d169a.chunk.css",
-    "static/js/2.8edf7069.chunk.js": "/Jazbaat/static/js/2.8edf7069.chunk.js",
-    "static/js/2.8edf7069.chunk.js.map": "/Jazbaat/static/js/2.8edf7069.chunk.js.map",
-    "static/js/3.7d5dcc22.chunk.js": "/Jazbaat/static/js/3.7d5dcc22.chunk.js",
-    "static/js/3.7d5dcc22.chunk.js.map": "/Jazbaat/static/js/3.7d5dcc22.chunk.js.map",
+    "static/js/2.3093283f.chunk.js": "/Jazbaat/static/js/2.3093283f.chunk.js",
+    "static/js/2.3093283f.chunk.js.map": "/Jazbaat/static/js/2.3093283f.chunk.js.map",
+    "static/js/3.e0594073.chunk.js": "/Jazbaat/static/js/3.e0594073.chunk.js",
+    "static/js/3.e0594073.chunk.js.map": "/Jazbaat/static/js/3.e0594073.chunk.js.map",
     "index.html": "/Jazbaat/index.html",
     "static/css/2.150d169a.chunk.css.map": "/Jazbaat/static/css/2.150d169a.chunk.css.map",
-    "static/css/main.d89d0fb1.chunk.css.map": "/Jazbaat/static/css/main.d89d0fb1.chunk.css.map",
-    "static/js/2.8edf7069.chunk.js.LICENSE.txt": "/Jazbaat/static/js/2.8edf7069.chunk.js.LICENSE.txt",
+    "static/css/main.cdd40445.chunk.css.map": "/Jazbaat/static/css/main.cdd40445.chunk.css.map",
+    "static/js/2.3093283f.chunk.js.LICENSE.txt": "/Jazbaat/static/js/2.3093283f.chunk.js.LICENSE.txt",
     "static/media/App.css": "/Jazbaat/static/media/main.4265c924.png",
     "static/media/eventMonoact.49193849.JPG": "/Jazbaat/static/media/eventMonoact.49193849.JPG",
     "static/media/eventNukkad.3fab00f7.JPG": "/Jazbaat/static/media/eventNukkad.3fab00f7.JPG",
@@ -22,10 +22,10 @@
     "static/media/text.a24525c7.png": "/Jazbaat/static/media/text.a24525c7.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.04c6795a.js",
+    "static/js/runtime-main.cfe67f0b.js",
     "static/css/2.150d169a.chunk.css",
-    "static/js/2.8edf7069.chunk.js",
-    "static/css/main.d89d0fb1.chunk.css",
-    "static/js/main.8c6c2ab4.chunk.js"
+    "static/js/2.3093283f.chunk.js",
+    "static/css/main.cdd40445.chunk.css",
+    "static/js/main.07dc2f3a.chunk.js"
   ]
 }
