@@ -1,12 +1,15 @@
-import { makeStyles, Typography, Grid } from '@material-ui/core'
+import { makeStyles, Typography, Grid, Paper, recomposeColor } from '@material-ui/core'
 import React from 'react'
+import FacebookIcon from '@material-ui/icons/Facebook';
+import InstagramIcon from '@material-ui/icons/Instagram';
+import Cordinator from '../media/Cordinator.jpg'
+
 
 const useStyles = makeStyles({
     root:{
         width:"100%",
     },
     cards:{
-        margin: "50px",
         position: "relative",
         '& div':{
             width: "300px",
@@ -19,7 +22,7 @@ const useStyles = makeStyles({
                     transform: "scale(1.1)"
                 },
                 '& span':{
-                    transform: "translateX(50%) perspective(400px) rotateY(0deg)"
+                    transform: "translateX(50%) perspective(400px) rotateX(0deg)"
                 },
                 '& li':{
                     transform: "perspective(800px) rotateY(0deg)",
@@ -41,7 +44,11 @@ const useStyles = makeStyles({
                 height: "100%",
                 width: "100%",
                 filter: "grayscale(100%)",
-                transition: "2s",
+                transition: "2s", 
+                '@media only screen and (max-device-width : 1279px)': { 
+                    filter: "grayscale(0%)",
+                    transform: "scale(1.1)"
+                },
             },
             '& span':{
                 background: "#C9305E",
@@ -53,9 +60,12 @@ const useStyles = makeStyles({
                 bottom: "0",
                 width: "100%",
                 left:"-50%",
-                transform: "translateX(50%) perspective(400px) rotateY(90deg)",
-                transformOrigin: "right",
+                transform: "translateX(50%) perspective(400px) rotateX(90deg)",
+                transformOrigin: "bottom",
                 transition: "700ms ease-in-out",
+                '@media only screen and (max-device-width : 1279px)': { 
+                    transform: "translateX(50%) perspective(400px) rotateY(0deg)"
+                },
             },
             '& ul':{
                 position: "absolute",
@@ -74,9 +84,15 @@ const useStyles = makeStyles({
                     transform: "perspective(800px) rotateY(90deg)",
                     transition: "0.5s",
                     transformOrigin: "left",
+                    '@media only screen and (max-device-width : 1279px)': { 
+                        transform: "perspective(800px) rotateY(0deg)",
+                    },
                 }
             }
         }
+    },
+    paper:{
+        margin: "50px",
     }
 });
 
@@ -86,24 +102,31 @@ const TeamCard = (props) => {
 
     return (
         <div>
-            <Grid container xs={12} className={classes.root} justify="center" alignContent="center">
-                <Grid container xs={11} sm={6} justify="center" alignContent="center">
-                    
-                    <div className={classes.cards}>
-                        <div className="imgBx4">
-                            <img src="http://www.dumpaday.com/wp-content/uploads/2018/04/photos-23-2.jpg"/>
-                            <span>{props.title}<br/>{props.name}</span>
-                            <ul>
-                                <li><a href="https://facebook.com">FB</a></li>
-                                <li><a href="https://www.instagram.com">IG</a></li>
-                                <li><a href="https://twitter.com">TW</a></li>
-                                <li><a href="https://www.youtube.com">YT</a></li>
-                            </ul>
+            <Paper className={classes.paper}>
+                <Grid container xs={12} className={classes.root} justify="center" alignContent="center">
+                    <Grid container xs={11} sm={6} justify="center" alignContent="center">
+                        
+                        <div className={classes.cards}>
+                            <div className="imgBx4">
+                                <img src={props.src}/>
+                                <span>
+                                    <Typography variant="h5" style={{fontFamily: "'Playfair Display',sans serif", fontWeight:"500", letterSpacing:"0.1em"}}>
+                                        {props.title}
+                                    </Typography>
+                                    <Typography variant="subtitle1" style={{fontFamily: "'Noto Sans JP', sans-serif", fontWeight:"300"}}>
+                                        {props.name}
+                                    </Typography>
+                                </span>
+                                <ul>
+                                    <li><a href={props.fb}  target="_blank"><FacebookIcon color="secondary"/></a></li>
+                                    <li><a href={props.insta} target="_blank"><InstagramIcon color="secondary"/></a></li>
+                                </ul>
+                            </div>
                         </div>
-                    </div>
-                    
+                        
+                    </Grid>
                 </Grid>
-            </Grid>
+            </Paper>
         </div>
     )
 }

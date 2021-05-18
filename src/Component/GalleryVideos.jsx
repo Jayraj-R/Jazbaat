@@ -1,27 +1,37 @@
+import React from 'react'
 import { Grid, makeStyles } from '@material-ui/core'
 import PlayCircleOutlineRoundedIcon from '@material-ui/icons/PlayCircleOutlineRounded';
-import React from 'react'
+import classroom from '../media/thumbs/classroomThumb.png'
+import adMad from '../media/thumbs/admadThumb.png'
+import darKhauff from '../media/thumbs/darKhauffThumb.png'
+import jannatkijung from '../media/thumbs/jannatkijungThumb.png'
+import mahamedia from '../media/thumbs/mahamediaThumb.png'
+import mime from '../media/thumbs/mimeThumb.png'
+import oneact from '../media/thumbs/oneactThumb.png'
 
 const useStyles = makeStyles({
     root:{
         position: "relative",
         width: "100%",
-        display: "grid",
-        gridTemplateColumns: "repeat(auto-fit, minmax(350px, 1fr))",
-        gridGap: "0",
+        display: "flex",
+        flexWrap:"wrap",
+        justifyContent:"center",
         margin: "0em 2em",
-        padding: "5em 0em 0em 0em",
+        paddingTop: "2em",
         '& section':{
             position: "relative",
-            width: "84%",
+            width: "18.8em",
             height: "12em",
-            backgroundColor: "aliceblue",
-            margin: "2em 3em",
+            backgroundColor: "#fef9f0",
+            color:"#4A4A4A",
+            margin: "2em 1em",
             padding: "2em 0em",
             display: "flex",
             flexDirection: "column",
-            boxShadow: "0 2px 10px rgba(131, 131, 131, 0.438)",
             transition: "0.2s ease-in-out",
+            '@media only screen and (max-device-width : 1279px)': { 
+                height: "18em",
+            },
             "&:hover" :{
                 height: "18em",
                 '& div':{
@@ -41,7 +51,7 @@ const useStyles = makeStyles({
                 top: "-60px",
                 left: "20px",
                 zIndex: "1",
-                boxShadow: "0 2px 10px rgba(131, 131, 131, 0.438)",
+                borderRadius: "10px",
                 '& img':{
                     width: "100%",
                     height: "12em",
@@ -50,12 +60,18 @@ const useStyles = makeStyles({
                 },
                 '& p':{
                     position:"relative",
+                    borderRadius: "10px",
                     top:"-100%",
                     padding:"4em 0em",
+                    height: "12em",
                     textAlign:"center",
                     opacity:0,
+                    '@media only screen and (max-device-width : 1279px)': { 
+                        opacity:"1"
+                    },
                     '&:hover':{
-                        color:"grey"
+                        color:"#FACA08",
+                        background:"rgba(74, 74, 74,0.4)"
                     }
                 }
             },
@@ -64,10 +80,25 @@ const useStyles = makeStyles({
                 textAlign: "center",
                 visibility: "hidden",
                 opacity: "0",
+                margin:"0em 1em",
+                fontFamily: "'Noto Sans JP', sans-serif",
+                fontWeight:"400",
                 transition: "0.2s ease-in-out",
+                '@media only screen and (max-device-width : 1279px)': { 
+                    visibility: "visible",
+                    opacity: "1",
+                    marginTop: "-2em",
+                    transitionDelay: "0.2s",
+                },
             }
         }
     },
+    links:{
+        color:"#4A4A4A",
+        '&:hover':{
+            color:"#fef9f0"
+        }
+    }
     
 });
 
@@ -77,39 +108,46 @@ const GalleryVideos = () => {
 
     const videos = [
         {
-            img:"http://www.mandysam.com/img/random.jpg",
-            title:"Lorem",
-            detail:"lorem ipsum dolor"
+            img:classroom,
+            title:"Classroom",
+            detail:"",
+            src:"https://www.youtube.com/watch?v=akDSYR8UQC0&t=1177s"
         },
         {
-            img:"http://www.mandysam.com/img/random.jpg",
-            title:"Lorem",
-            detail:"lorem ipsum dolor"
+            img:adMad,
+            title:"Gangajal Deo",
+            detail:"",
+            src:"https://www.youtube.com/watch?v=eatkduXz9Bg&t=152s"
         },
         {
-            img:"http://www.mandysam.com/img/random.jpg",
-            title:"Lorem",
-            detail:"lorem ipsum dolor"
+            img:darKhauff,
+            title:"Darr, Khauf, Bandish",
+            detail:"",
+            src:"https://www.youtube.com/watch?v=tyDeOtDz7Do"
         },
         {
-            img:"http://www.mandysam.com/img/random.jpg",
-            title:"Lorem",
-            detail:"lorem ipsum dolor"
+            img:mime ,
+            title:"Mime",
+            detail:"",
+            src:"https://www.youtube.com/watch?v=-JLk_D56-6U&t=70s"
         },
         {
-            img:"http://www.mandysam.com/img/random.jpg",
-            title:"Lorem",
-            detail:"lorem ipsum dolor"
+            img:mahamedia,
+            title:"Mahamedia",
+            detail:"",
+            src:"https://www.youtube.com/watch?v=lOQ8sHZfUSE"
         },
         {
-            img:"http://www.mandysam.com/img/random.jpg",
-            title:"Lorem",
-            detail:"lorem ipsum dolor"
+            img:oneact,
+            title:"28 seconds",
+            detail:"",
+            src:"https://www.youtube.com/watch?v=-YEujt7VKIw&t=1362s"
         },
         {
-            img:"http://www.mandysam.com/img/random.jpg",
-            title:"Lorem",
-            detail:"lorem ipsum dolor"
+            img: jannatkijung,
+            title:"Jannat ki Jung",
+            detail:"",
+            src:"https://www.youtube.com/watch?v=7sQyzqJqOFo&t=424s"
         }
     ]
     return (
@@ -122,7 +160,11 @@ const GalleryVideos = () => {
                             <section>
                                 <span>
                                     <img src={video.img} />
-                                    <p><PlayCircleOutlineRoundedIcon style={{ fontSize: "5em" }}/></p>
+                                    <a href={video.src} target="_blank" className={classes.links}>
+                                        <p>
+                                            <PlayCircleOutlineRoundedIcon style={{ fontSize: "5em" }}/>
+                                        </p>
+                                    </a>
                                 </span>
                                 <div >
                                     <h2>{video.title}</h2><p>{video.detail}</p>

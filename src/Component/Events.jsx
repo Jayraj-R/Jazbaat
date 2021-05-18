@@ -1,5 +1,5 @@
 import { makeStyles, Typography, Grid } from '@material-ui/core'
-import React from 'react'
+import React, {useEffect, useState} from 'react'
 import EventCard from './EventCard';
 import eventNukkad from '../media/eventNukkad.JPG'
 import eventStagePlay    from '../media/eventStage.png'
@@ -18,20 +18,31 @@ const useStyles = makeStyles({
         width:"auto",
         zIndex:1,
         left:0,
-        textAlign:"center",'@media only screen and (max-width : 1199px)': {
+        textAlign:"center",
+        '@media only screen and (max-width : 1199px)': {
             left:"auto",
         },
     },
     cards:{
+        marginTop:"4em",
         position:"relative",
         zIndex:2,
-        margin:"2em 0em"
+        '@media only screen and (max-width : 1199px)': {
+            marginTop:"6.5em",
+        },
     }
 });
 
 
 const Events = () => {
     const classes = useStyles()
+    const [is13, setIs13] = useState(false)
+
+    useEffect(() => {
+      if(window.screen.availWidth<1440){
+        setIs13(!is13)
+      }
+    },[window.screen.availWidth]);
 
     const events = [
         {
@@ -60,8 +71,8 @@ const Events = () => {
                 <span>
                     <ParallaxHeader
                         title="Events"
-                        duration="2295"
-                        to="24em"
+                        duration="1750"
+                        to={!is13 ? '18em' : '27em'}
                     /> 
                 </span>
             </Grid>

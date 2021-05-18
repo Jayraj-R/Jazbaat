@@ -18,7 +18,7 @@ const useStyles = makeStyles({
       display:"flex",
       flexDirection:"column",
       width: "100%",
-      marginTop:40,
+      marginTop:"2em",
     },
     links:{
       textDecoration: "none",
@@ -27,7 +27,12 @@ const useStyles = makeStyles({
     underline:{
       position:"relative",
       top:"-0.8em",
-      color:"#FEF9EE"
+      background:"#FEF9EE",
+    },
+    text:{
+      fontFamily: "'Noto Sans JP', sans-serif",
+      fontWeight:"400",
+      letterSpacing:"0.35em"
     }
 });
 
@@ -56,7 +61,7 @@ const Sidebar = () => {
     <Grid container className={classes.list}  >
         <a href="#events" className={classes.links}>
             <Button color="secondary" >
-              <span style={{ letterSpacing: 5, marginBottom:20}}>
+              <span className={classes.text}>
                 Events
                 <hr className={classes.underline}/>
               </span>
@@ -64,7 +69,7 @@ const Sidebar = () => {
           </a>
           <a href="#gallery" className={classes.links}>
             <Button color="secondary">
-              <span style={{ letterSpacing: 5, marginBottom:20}}>
+              <span className={classes.text}>
                 Gallery
                 <hr className={classes.underline}/>
               </span>
@@ -72,7 +77,7 @@ const Sidebar = () => {
           </a>
           <a href="#teams" className={classes.links}>
             <Button color="secondary">
-              <span style={{ letterSpacing: 5, marginBottom:20}}>
+              <span className={classes.text}>
                 Team
                 <hr className={classes.underline}/>
               </span>
@@ -80,7 +85,7 @@ const Sidebar = () => {
           </a>
           <a href="#contact" className={classes.links}>
             <Button color="secondary">
-              <span style={{ letterSpacing: 5, marginBottom:20}}>
+              <span className={classes.text}>
                 Contact
                 <hr className={classes.underline}/>
               </span>

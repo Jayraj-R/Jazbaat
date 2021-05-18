@@ -12,15 +12,12 @@ const useStyles = makeStyles({
         margin:"2em 0em",
         "&:hover":{
             '& div':{
-                width:"14em",
+                width:"18em",
+                padding:"0em 2em",
             }
         },
         '@media only screen and (max-width : 480px)': {
             width:"18em",
-            height:"18em"
-        },
-        '@media only screen and (min-device-width: 481px) and (max-width : 767px)': {
-            width:"22em",
             height:"18em"
         },
         
@@ -33,37 +30,32 @@ const useStyles = makeStyles({
             width:"18em",
             height:"18em"
         },
-        '@media only screen and (min-device-width: 481px) and (max-width : 767px)': {
-            width:"22em",
-            height:"18em"
-        },
     },
     content:{
         position:'relative',
         height:"30em",
         width:"45em",
-        background:"rgba(200,20,200,0.5)",
+        background:"rgba(74, 74, 74,0.4)",
         float:"right",
-        color:"yellow",
+        color:"#fef9f0",
         display:"flex",
         flexDirection:"column",
         justifyContent:"center",
-        padding:"0em 2em",
+        padding:"0em 8em",
         '@media only screen and (max-width : 480px)': {
             width:"18em",
             height:"18em",
-        },
-        '@media only screen and (min-device-width: 481px) and (max-width : 767px)': {
-            width:"22em",
-            height:"18em",
+            padding:"0em 2em",
         },
         '@media only screen and (min-device-width: 768px) and (max-width : 1199px)': {
             width:"30%",
+            padding:"0em 2em",
         },
     },
     title:{
         position:"relative",
         top:"-100%",
+        
     }
 });
 
@@ -85,11 +77,11 @@ const EventCard = (props) => {
                                     
                                         <div className={classes.content}  style={{transition: "width 0.9s ease-in-out,padding 0.9s ease-in-out",}}> 
                                       
-                                            <Typography variant="h4" gutterBottom>
+                                            <Typography style={{fontFamily: "'Playfair Display',sans serif", fontWeight:"500"}} variant="h4" gutterBottom>
                                                 {props.title}
                                             </Typography>
                                             
-                                            <Typography variant="subtitle1" className={classes.caption}>
+                                            <Typography style={{fontFamily: "'Noto Sans JP', sans-serif", fontWeight:"400"}} variant="subtitle1" className={classes.caption}>
                                                 {props.caption}
                                             </Typography>  
                                       

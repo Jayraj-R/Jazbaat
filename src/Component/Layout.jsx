@@ -44,9 +44,7 @@ const Layout = () => {
             </Grid>
 
             {/* parallex image */}
-            <Grid xs={12} className="parallax">
-                <section className="bg-image"></section>
-            </Grid>
+            <ParallaxQuotes/>
 
 
             {/* team cards */}

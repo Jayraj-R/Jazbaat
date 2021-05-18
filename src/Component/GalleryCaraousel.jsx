@@ -1,46 +1,56 @@
-import React,{useState} from 'react'
+import React,{useState, useEffect} from 'react'
 import Carousel from 'react-bootstrap/Carousel'
-import eventNukkad from '../media/eventNukkad.JPG'
-import eventStagePlay    from '../media/eventStage.png'
-import eventMonoact from '../media/eventMonoact.JPG'
 import { makeStyles } from '@material-ui/styles'
+import pic1 from '../media/gallery/pic1.JPG'
+import pic2 from '../media/gallery/pic2.jpg'
+import pic3 from '../media/gallery/pic3.jpg'
 
 const useStyles = makeStyles({
     root:{
         width:"100%",
     },
-    image:{
+    container:{
         width:"100%",
-        height:"65vh"
-    }
+        height:"100%"
+    },
+    image:{
+        '@media only screen and (max-width : 480px)': {
+            height:"18em",
+        },
+        '@media only screen and (min-device-width: 481px) and (max-width : 767px)': {
+            height:"18em",
+        },
+    },
+    
 })
 
 const GalleryCaraousel = () => {
     const classes = useStyles()
     const [index, setIndex] = useState(0);
 
-  const handleSelect = (selectedIndex, e) => {
-    setIndex(selectedIndex);
-  };
+    const handleSelect = (selectedIndex, e) => {
+        setIndex(selectedIndex);
+    };
+
+    const [isMobile, setIsMobile] = useState(false)
+
+    useEffect(() => {
+        if(window.screen.availWidth<1440){
+        setIsMobile(!isMobile)
+        }
+    },[window.screen.availWidth]);
+
+
 
   const images = [
     {
-        id:1,
-        title:"Nukkad - Natak",
-        caption: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam nobis rerum nihil corrupti cupiditate hic?",
-        img: eventNukkad
+        img: pic1
     },
     {
-        id:3,
-        title:"Stage Play",
-        caption: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam nobis rerum nihil corrupti cupiditate hic?",
-        img: eventStagePlay
+        img: pic2
     },
     {
-        id:1,
-        title:"Monoact",
-        caption: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam nobis rerum nihil corrupti cupiditate hic?",
-        img: eventMonoact
+        img: pic3
     }
 ]
 
@@ -48,16 +58,12 @@ const GalleryCaraousel = () => {
         <Carousel className={classes.root} activeIndex={index} onSelect={handleSelect}>
             {
                 images.map(image =>
-                    <Carousel.Item className={classes.image}>
+                    <Carousel.Item className={classes.container}>
                         <img
-                        className="d-block w-100"
-                        src={image.img}
-                        alt="First slide"
+                            className={`d-block w-100 ${classes.image}`}
+                            src={image.img}
+                            alt="First slide"
                         />
-                        <Carousel.Caption>
-                            <h3>{image.title}</h3>
-                            <p>{image.caption}</p>
-                        </Carousel.Caption>
                     </Carousel.Item>
                 )
             }

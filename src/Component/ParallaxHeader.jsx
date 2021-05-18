@@ -6,7 +6,20 @@ import { makeStyles, Typography, Grid } from "@material-ui/core";
 const useStyles = makeStyles({
   root: {
     position:"relative",
-    margin:"0em 0.5em"
+    margin:"0em 0.5em",
+    color:"aliceblue"
+  },
+  title:{
+    fontSize:"6em",
+    textAlign:"center",
+    fontFamily: "'Playfair Display',sans serif",
+    fontWeight:"500",
+    '@media only screen and (max-width : 1199px)': {
+      left:"auto",
+    },
+    '@media only screen and (min-width : 1280px) and (max-width : 1439px)': {
+      fontSize:"4em"
+    },
   }
 });
 
@@ -15,7 +28,7 @@ const ParallaxHeader = (props) => {
   const [isMobile, setIsMobile] = useState(false)
 
   useEffect(() => {
-    if(window.screen.availWidth<1440){
+    if(window.screen.availWidth<1280){
       setIsMobile(!isMobile)
     }
 },[window.screen.availWidth]);
@@ -26,7 +39,7 @@ const ParallaxHeader = (props) => {
         !isMobile ?
           (<Controller>
             <Scene
-              indicators={true}
+              indicators={false}
               reverse={true}
               duration={props.duration}
               offset={290}
@@ -36,7 +49,7 @@ const ParallaxHeader = (props) => {
                 staggerTo={{ top:`${props.to}` }}
                 ease= "Linear.easeNone"
               >
-                <Typography  variant="h1" style={{ letterSpacing: 5, position:"relative"}}>
+                <Typography color="error"  variant="h2" className={classes.title} style={{ letterSpacing: 5, position:"relative"}}>
                   {props.title}
                 </Typography>
               </Tween>
@@ -44,9 +57,9 @@ const ParallaxHeader = (props) => {
           </Controller>)
           :
           (
-            <Typography  variant="h1" style={{ letterSpacing: 5, position:"relative"}}>
+            <Typography  variant="h2"  color="error"   className={classes.title} style={{ letterSpacing: 5, position:"relative"}}>
                   {props.title}
-                </Typography>
+            </Typography>
           )
       }
       

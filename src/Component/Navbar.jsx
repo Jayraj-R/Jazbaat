@@ -35,9 +35,9 @@ const useStyles = makeStyles({
   },
   underline:{
     position:"relative",
-    top:-10,
+    top:"-1em",
     marginBottom:-10,
-    color:"white",
+    background:"#FEF9EE",
     transform:'scaleX(0)',
     transformOrigin:"right",
     transition:"transform 250ms ease-in"
@@ -55,6 +55,11 @@ const useStyles = makeStyles({
     '@media only screen and (max-width : 964px)': {
       height:"3em"
     }
+  },
+  text:{
+    fontFamily: "'Noto Sans JP', sans-serif",
+    fontWeight:"400",
+    letterSpacing:"0.35em"
   }
 });
 
@@ -72,15 +77,15 @@ const Navbar = () => {
                 <Grid className={classes.navbarButton} justify="flex-end">
                   <a href="#events" className={classes.links}>
                     <Button className={classes.button} color="secondary">
-                      <span style={{ letterSpacing: 5}}>
+                      <span className={classes.text}>
                         Events
-                        <hr className={classes.underline}/>
+                        <hr className={classes.underline} style={{}}/>
                       </span>
                     </Button>
                   </a>
                   <a href="#gallery" className={classes.links}>
                     <Button className={classes.button} color="secondary">
-                      <span style={{ letterSpacing: 5}}>
+                      <span className={classes.text}>
                         Gallery
                         <hr className={classes.underline}/>
                       </span>
@@ -88,7 +93,7 @@ const Navbar = () => {
                   </a>
                   <a href="#teams" className={classes.links}>
                     <Button className={classes.button} color="secondary">
-                      <span style={{ letterSpacing: 4}}>
+                      <span className={classes.text}>
                         Team
                         <hr className={classes.underline}/>
                       </span>
@@ -96,7 +101,7 @@ const Navbar = () => {
                   </a>
                   <a href="#contact" className={classes.links}>
                     <Button className={classes.button} color="secondary">
-                      <span style={{ letterSpacing: 4}}>
+                      <span className={classes.text}>
                         Contact
                         <hr className={classes.underline}/>
                       </span>
