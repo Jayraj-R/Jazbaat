@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/Jazbaat/static/css/main.30c76152.chunk.css",
-    "main.js": "/Jazbaat/static/js/main.2c67f4c5.chunk.js",
-    "main.js.map": "/Jazbaat/static/js/main.2c67f4c5.chunk.js.map",
+    "main.js": "/Jazbaat/static/js/main.b156e426.chunk.js",
+    "main.js.map": "/Jazbaat/static/js/main.b156e426.chunk.js.map",
     "runtime-main.js": "/Jazbaat/static/js/runtime-main.3fc043cb.js",
     "runtime-main.js.map": "/Jazbaat/static/js/runtime-main.3fc043cb.js.map",
     "static/css/2.150d169a.chunk.css": "/Jazbaat/static/css/2.150d169a.chunk.css",
@@ -39,6 +39,6 @@
     "static/css/2.150d169a.chunk.css",
     "static/js/2.e78b3bc2.chunk.js",
     "static/css/main.30c76152.chunk.css",
-    "static/js/main.2c67f4c5.chunk.js"
+    "static/js/main.b156e426.chunk.js"
   ]
 }
