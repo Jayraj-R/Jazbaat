@@ -1,6 +1,6 @@
 import React from 'react'
 import Navbar from './Navbar'
-import { Grid, Typography } from '@material-ui/core'
+import { Grid } from '@material-ui/core'
 import Events from './Events'
 import Gallery from './Gallery'
 import ParallaxQuotes from './ParallaxQuotes';
@@ -23,7 +23,7 @@ const Layout = () => {
             {/* intro text & book button */}
             <Grid container xs={12} className="intro-text" justify="center" alignContent="center">
                 <Grid item xs={10} sm={8} md={6} lg={5}>
-                    <img className="main-logo" src={logo}/>
+                    <img className="main-logo" src={logo} alt="Jazzbaat"/>
                 </Grid>
             </Grid>
             
@@ -35,7 +35,9 @@ const Layout = () => {
             </Grid> 
 
             {/* Parallax quote */}
-            <ParallaxQuotes/>
+            <ParallaxQuotes
+                quote="आ काट ले पर तू बन जा क़ैदी हो जा तू पिंजरे में बंद, ये शब्द है किसके कैसी भाषा कैसी मान ले मेरी बातें बस।"    
+            />
 
             {/* gallery */}
             <Grid container xs={12} className="anchor"><a name="gallery"/></Grid>
@@ -44,7 +46,9 @@ const Layout = () => {
             </Grid>
 
             {/* parallex image */}
-            <ParallaxQuotes/>
+            <ParallaxQuotes
+                quote="मेरे दोस्त मर्दानगी मन की बात छुपाकर रोने में नहीं, मन की बात साझा कर के खुश होने में है।"
+            />
 
 
             {/* team cards */}

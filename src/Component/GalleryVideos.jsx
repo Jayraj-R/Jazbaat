@@ -159,8 +159,8 @@ const GalleryVideos = () => {
                         return(
                             <section>
                                 <span>
-                                    <img src={video.img} />
-                                    <a href={video.src} target="_blank" className={classes.links}>
+                                    <img src={video.img} alt={video.title}/>
+                                    <a href={video.src} target="_blank" rel="noreferrer" className={classes.links}>
                                         <p>
                                             <PlayCircleOutlineRoundedIcon style={{ fontSize: "5em" }}/>
                                         </p>

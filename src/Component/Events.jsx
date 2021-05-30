@@ -1,4 +1,4 @@
-import { makeStyles, Typography, Grid } from '@material-ui/core'
+import { makeStyles, Grid } from '@material-ui/core'
 import React, {useEffect, useState} from 'react'
 import EventCard from './EventCard';
 import eventNukkad from '../media/eventNukkad.JPG'
@@ -42,7 +42,7 @@ const Events = () => {
       if(window.screen.availWidth<1440){
         setIs13(!is13)
       }
-    },[window.screen.availWidth]);
+    },[]);
 
     const events = [
         {

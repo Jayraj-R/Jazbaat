@@ -1,4 +1,4 @@
-import { makeStyles, Typography, Grid } from '@material-ui/core'
+import { makeStyles, Grid } from '@material-ui/core'
 import React, {useEffect, useState} from 'react'
 import GalleryCaraousel from './GalleryCaraousel';
 import GalleryVideos from './GalleryVideos';
@@ -43,7 +43,7 @@ const Gallery = () => {
       if(window.screen.availWidth<1440){
         setIs13(!is13)
       }
-    },[window.screen.availWidth]);
+    },[]);
 
     return (
         <Grid container xs={12} className={classes.root} justify="center" alignContent="center">

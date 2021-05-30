@@ -1,13 +1,17 @@
 import React,{useState, useEffect} from 'react'
 import Carousel from 'react-bootstrap/Carousel'
 import { makeStyles } from '@material-ui/styles'
-import pic1 from '../media/gallery/pic1.JPG'
+import pic1 from '../media/gallery/pic1.jpg'
 import pic2 from '../media/gallery/pic2.jpg'
-import pic3 from '../media/gallery/pic3.jpg'
+import pic3 from '../media/gallery/pic3.jpeg'
+import pic4 from '../media/gallery/pic4.JPG'
+import pic5 from '../media/gallery/pic5.JPG'
+import pic6 from '../media/gallery/pic6.jpeg'
 
 const useStyles = makeStyles({
     root:{
         width:"100%",
+       
     },
     container:{
         width:"100%",
@@ -38,7 +42,7 @@ const GalleryCaraousel = () => {
         if(window.screen.availWidth<1440){
         setIsMobile(!isMobile)
         }
-    },[window.screen.availWidth]);
+    },[]);
 
 
 
@@ -51,7 +55,16 @@ const GalleryCaraousel = () => {
     },
     {
         img: pic3
-    }
+    },
+    {
+        img: pic4
+    },
+    {
+        img: pic5
+    },
+    {
+        img: pic6
+    },
 ]
 
   return (

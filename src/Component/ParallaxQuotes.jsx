@@ -1,7 +1,7 @@
 import { Typography, Grid, makeStyles } from '@material-ui/core';
 import React from 'react'
 import { Parallax, Background } from "react-parallax";
-import bgImage from '../media/main.png'
+import pic1 from '../media/pic1.JPG'
 
 const useStyles = makeStyles({
     container:{
@@ -15,10 +15,19 @@ const useStyles = makeStyles({
         backgroundAttachment: "fixed", 
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat"
+    },
+    quote:{
+        fontSize:"2.4em",
+        fontFamily: "'Kurale', serif",
+        '@media only screen and (max-width : 1279px)': {
+            fontSize:"2em",
+        },
+        margin:"2.5em 0em",
+        lineHeight:"1.3em"
     }
 })
 
-const ParallaxQuotes = () => {
+const ParallaxQuotes = (props) => {
     const classes = useStyles()
     return (
         <div>
@@ -26,20 +35,15 @@ const ParallaxQuotes = () => {
                 
                     <Background className="custom-bg">
                     <Grid xs={12} container justify="center" className={classes.container}>
-                        <img src={bgImage} className={classes.image}/>
+                        <img src={pic1} className={classes.image}/>
                         </Grid>
                     </Background>
                
                 
                 <Grid xs={12} container justify="center" className={classes.container}>
                     <Grid xs={11} sm={6} >
-                        <Typography color="secondary" variant="h4" gutterBottom  style={{fontFamily: "'Noto Sans JP', sans-serif", fontWeight:"300"}}>
-                            <i>
-                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam debitis, quos molestias similique quibusdam officiis possimus! Error provident tempore quidem!
-                            </i>
-                        </Typography>
-                        <Typography variant="h6" color="secondary" style={{fontFamily: "'Noto Sans JP', sans-serif", fontWeight:"400"}}>
-                            - Hello There
+                        <Typography color="secondary" variant="h4" gutterBottom className={classes.quote}>
+                            {props.quote}
                         </Typography>
                     </Grid>
                 </Grid>

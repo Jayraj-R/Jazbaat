@@ -31,7 +31,7 @@ const ParallaxHeader = (props) => {
     if(window.screen.availWidth<1280){
       setIsMobile(!isMobile)
     }
-},[window.screen.availWidth]);
+},[]);
 
   return (
     <Grid xs={12} className={classes.root}>

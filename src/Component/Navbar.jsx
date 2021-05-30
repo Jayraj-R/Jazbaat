@@ -72,7 +72,7 @@ const Navbar = () => {
         <AppBar position="fixed">
         <Toolbar className={classes.navbar}>
             <Container maxWidth="xl" className={classes.navbarDisplayFlex}>
-              <a href="#start" className={classes.links}><img  className={classes.logo} src={text}/></a>
+              <a href="#start" className={classes.links}><img  className={classes.logo} src={text} alt="Jazbaat"/></a>
             <Hidden smDown>
                 <Grid className={classes.navbarButton} justify="flex-end">
                   <a href="#events" className={classes.links}>

@@ -72,7 +72,7 @@ const EventCard = (props) => {
                 
                         <Paper elevation={4} className={classes.card}>
                             <section> 
-                                <img className={classes.image} src={props.src}/>
+                                <img className={classes.image} src={props.src} alt={props.title}/>
                                 <section variant="h4" className={classes.title} gutterBottom>
                                     
                                         <div className={classes.content}  style={{transition: "width 0.9s ease-in-out,padding 0.9s ease-in-out",}}> 

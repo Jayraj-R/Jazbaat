@@ -1,8 +1,7 @@
-import { makeStyles, Typography, Grid, Paper, recomposeColor } from '@material-ui/core'
+import { makeStyles, Typography, Grid, Paper } from '@material-ui/core'
 import React from 'react'
 import FacebookIcon from '@material-ui/icons/Facebook';
 import InstagramIcon from '@material-ui/icons/Instagram';
-import Cordinator from '../media/Cordinator.jpg'
 
 
 const useStyles = makeStyles({
@@ -51,8 +50,7 @@ const useStyles = makeStyles({
                 },
             },
             '& span':{
-                background: "#C9305E",
-                color: "#fff",
+                background: "#FACA08 ",
                 textAlign: "center",
                 margin: "0",
                 padding: "10px 0",
@@ -76,7 +74,7 @@ const useStyles = makeStyles({
                 listStyle: "none",
                 background: "rgba(255, 255, 255, 0)",
                 '& li':{
-                    background: "#333",
+                    background: "#4A4A4A",
                     height: "40px",
                     width: "40px",
                     textAlign: "center",
@@ -108,7 +106,7 @@ const TeamCard = (props) => {
                         
                         <div className={classes.cards}>
                             <div className="imgBx4">
-                                <img src={props.src}/>
+                                <img src={props.src} alt={props.title}/>
                                 <span>
                                     <Typography variant="h5" style={{fontFamily: "'Playfair Display',sans serif", fontWeight:"500", letterSpacing:"0.1em"}}>
                                         {props.title}
@@ -118,8 +116,8 @@ const TeamCard = (props) => {
                                     </Typography>
                                 </span>
                                 <ul>
-                                    <li><a href={props.fb}  target="_blank"><FacebookIcon color="secondary"/></a></li>
-                                    <li><a href={props.insta} target="_blank"><InstagramIcon color="secondary"/></a></li>
+                                    <li><a href={props.fb}  target="_blank" rel="noreferrer"><FacebookIcon color="secondary"/></a></li>
+                                    <li><a href={props.insta} target="_blank" rel="noreferrer"><InstagramIcon color="secondary"/></a></li>
                                 </ul>
                             </div>
                         </div>

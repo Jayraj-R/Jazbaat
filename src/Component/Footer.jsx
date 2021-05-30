@@ -35,13 +35,13 @@ const Footer = () => {
                 </Typography>
             </Grid>
             <Grid xs={12} sm={6} lg={2} container justify="center" className={classes.icons}>
-                <a href="https://www.facebook.com/Jazbaatiiitdmj" target="_blank" className={classes.links}>
+                <a href="https://www.facebook.com/Jazbaatiiitdmj" target="_blank" rel="noreferrer" className={classes.links}>
                     <FacebookIcon color="primary" style={{ fontSize: 40 }}/>
                 </a>
-                <a  href="https://www.instagram.com/jazbaat_dc/" target="_blank" className={classes.links}>
+                <a  href="https://www.instagram.com/jazbaat_dc/" target="_blank" rel="noreferrer" className={classes.links}>
                     <InstagramIcon color="primary" style={{ fontSize: 40 }}/>
                 </a>
-                <a  href="https://www.youtube.com/user/jazbaatiiitdmj" target="_blank" className={classes.links}>
+                <a  href="https://www.youtube.com/user/jazbaatiiitdmj" target="_blank" rel="noreferrer" className={classes.links}>
                     <YouTubeIcon color="primary" style={{ fontSize: 40 }}/>
                 </a>
                 <a href="mailto:jazbaat@iiitdmj.ac.in" className={classes.links}>
