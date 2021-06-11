@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/Jazbaat/static/css/main.30c76152.chunk.css",
-    "main.js": "/Jazbaat/static/js/main.ad2af1ca.chunk.js",
-    "main.js.map": "/Jazbaat/static/js/main.ad2af1ca.chunk.js.map",
-    "runtime-main.js": "/Jazbaat/static/js/runtime-main.3fc043cb.js",
-    "runtime-main.js.map": "/Jazbaat/static/js/runtime-main.3fc043cb.js.map",
-    "static/css/2.150d169a.chunk.css": "/Jazbaat/static/css/2.150d169a.chunk.css",
-    "static/js/2.e78b3bc2.chunk.js": "/Jazbaat/static/js/2.e78b3bc2.chunk.js",
-    "static/js/2.e78b3bc2.chunk.js.map": "/Jazbaat/static/js/2.e78b3bc2.chunk.js.map",
-    "static/js/3.90ba8535.chunk.js": "/Jazbaat/static/js/3.90ba8535.chunk.js",
-    "static/js/3.90ba8535.chunk.js.map": "/Jazbaat/static/js/3.90ba8535.chunk.js.map",
+    "main.css": "/Jazbaat/static/css/main.f15b4735.chunk.css",
+    "main.js": "/Jazbaat/static/js/main.e02c6329.chunk.js",
+    "main.js.map": "/Jazbaat/static/js/main.e02c6329.chunk.js.map",
+    "runtime-main.js": "/Jazbaat/static/js/runtime-main.b9cd5ee5.js",
+    "runtime-main.js.map": "/Jazbaat/static/js/runtime-main.b9cd5ee5.js.map",
+    "static/css/2.1c44f44c.chunk.css": "/Jazbaat/static/css/2.1c44f44c.chunk.css",
+    "static/js/2.ee042b8b.chunk.js": "/Jazbaat/static/js/2.ee042b8b.chunk.js",
+    "static/js/2.ee042b8b.chunk.js.map": "/Jazbaat/static/js/2.ee042b8b.chunk.js.map",
+    "static/js/3.49dc4ac8.chunk.js": "/Jazbaat/static/js/3.49dc4ac8.chunk.js",
+    "static/js/3.49dc4ac8.chunk.js.map": "/Jazbaat/static/js/3.49dc4ac8.chunk.js.map",
     "index.html": "/Jazbaat/index.html",
-    "static/css/2.150d169a.chunk.css.map": "/Jazbaat/static/css/2.150d169a.chunk.css.map",
-    "static/css/main.30c76152.chunk.css.map": "/Jazbaat/static/css/main.30c76152.chunk.css.map",
-    "static/js/2.e78b3bc2.chunk.js.LICENSE.txt": "/Jazbaat/static/js/2.e78b3bc2.chunk.js.LICENSE.txt",
+    "static/css/2.1c44f44c.chunk.css.map": "/Jazbaat/static/css/2.1c44f44c.chunk.css.map",
+    "static/css/main.f15b4735.chunk.css.map": "/Jazbaat/static/css/main.f15b4735.chunk.css.map",
+    "static/js/2.ee042b8b.chunk.js.LICENSE.txt": "/Jazbaat/static/js/2.ee042b8b.chunk.js.LICENSE.txt",
     "static/media/index.css": "/Jazbaat/static/media/CarnevaleeFreakshow.70bd43df.ttf",
     "static/media/CoCordinator.76d6b1cc.jpeg": "/Jazbaat/static/media/CoCordinator.76d6b1cc.jpeg",
     "static/media/Cordinator.53f2fa6b.jpg": "/Jazbaat/static/media/Cordinator.53f2fa6b.jpg",
@@ -39,10 +39,10 @@
     "static/media/text.a24525c7.png": "/Jazbaat/static/media/text.a24525c7.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.3fc043cb.js",
-    "static/css/2.150d169a.chunk.css",
-    "static/js/2.e78b3bc2.chunk.js",
-    "static/css/main.30c76152.chunk.css",
-    "static/js/main.ad2af1ca.chunk.js"
+    "static/js/runtime-main.b9cd5ee5.js",
+    "static/css/2.1c44f44c.chunk.css",
+    "static/js/2.ee042b8b.chunk.js",
+    "static/css/main.f15b4735.chunk.css",
+    "static/js/main.e02c6329.chunk.js"
   ]
 }
