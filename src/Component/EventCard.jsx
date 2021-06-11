@@ -65,7 +65,7 @@ const EventCard = (props) => {
     return (
         <div>
 
-            <Grid container xs={12} className={classes.root} justify="center" alignContent="center">
+            <Grid container xs={12} className={classes.root} justify="center" alignContent="center" data-aos={props.id%2==0 ? `fade-right` : `fade-left`} data-aos-duration={600} aos-delay={200}>
                 
                 <Grid container xs={11} sm={8} className={classes.cards} justify="center" alignContent="center">
                     <Grid className={classes.root} xs={12} sm={10} container justify="center" alignContent="center">

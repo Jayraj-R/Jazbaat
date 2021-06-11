@@ -46,6 +46,7 @@ const Team = () => {
                 {
                         members.map(member =>
                             <TeamCard
+                                id={member.id}
                                 title={member.title}
                                 name={member.name}
                                 src={member.img}

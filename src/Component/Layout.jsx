@@ -7,21 +7,23 @@ import ParallaxQuotes from './ParallaxQuotes';
 import logo from '../media/logo.png'
 import Team from './Team'
 import Footer from './Footer'
+import AOS from "aos";
+import "aos/dist/aos.css";
+AOS.init();
 
 const Layout = () => {
     return (
         <Grid  container xs={12} className="root" justify="center" alignContent="center">
 
             {/* base image and navbar-sidebar */}
-            <Grid xs={12}>
+            <Grid xs={12} data-aos="fade-up" data-aos-duration={600} aos-delay={200}>
                 <Grid container xs={12}><a name="start"/></Grid>
                 <section className="bg-image"></section>
-                <span className="fade"></span>
             </Grid>
             <Navbar/>
 
             {/* intro text & book button */}
-            <Grid container xs={12} className="intro-text" justify="center" alignContent="center">
+            <Grid container xs={12} data-aos="zoom-out" data-aos-duration={600} aos-delay={600} className="intro-text" justify="center" alignContent="center">
                 <Grid item xs={10} sm={8} md={6} lg={5}>
                     <img className="main-logo" src={logo} alt="Jazzbaat"/>
                 </Grid>

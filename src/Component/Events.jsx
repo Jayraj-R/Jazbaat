@@ -5,6 +5,9 @@ import eventNukkad from '../media/eventNukkad.JPG'
 import eventStagePlay    from '../media/eventStage.png'
 import eventMonoact from '../media/eventMonoact.JPG'
 import ParallaxHeader from './ParallaxHeader'
+import AOS from "aos";
+import "aos/dist/aos.css";
+AOS.init();
 
 const useStyles = makeStyles({
     root:{
@@ -66,27 +69,28 @@ const Events = () => {
     ]
 
     return (
-        <Grid container xs={12} className={classes.root} justify="center" alignContent="center">
-            <Grid container xs={12} sm={8} justify="center" className={classes.header}>
-                <span>
-                    <ParallaxHeader
-                        title="Events"
-                        duration="1750"
-                        to={!is13 ? '18em' : '27em'}
-                    /> 
-                </span>
-            </Grid>
-            <Grid container xs={11} sm={8} className={classes.cards} justify="center" alignContent="center">
-                {
-                        events.map(event =>
-                            <EventCard
-                                title={event.title}
-                                caption={event.caption}
-                                src={event.img}
-                            />
-                        )
-                }
-            </Grid>
+        <Grid container xs={12} className={classes.root} justify="center" alignContent="center" >
+                <Grid container xs={12} sm={8} justify="center" className={classes.header} data-aos="fade-up" data-aos-duration={600} aos-delay={200}>
+                    <span>
+                        <ParallaxHeader
+                            title="Events"
+                            duration="1750"
+                            to={!is13 ? '18em' : '27em'}
+                        /> 
+                    </span>
+                </Grid>
+                <Grid container xs={11} sm={8} className={classes.cards} justify="center" alignContent="center">
+                    {
+                            events.map(event =>
+                                <EventCard
+                                    id={event.id}
+                                    title={event.title}
+                                    caption={event.caption}
+                                    src={event.img}
+                                />
+                            )
+                    }
+                </Grid>
         </Grid>
     )
 }

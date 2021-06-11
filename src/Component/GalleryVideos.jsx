@@ -108,42 +108,49 @@ const GalleryVideos = () => {
 
     const videos = [
         {
+            id:1,
             img:classroom,
             title:"Classroom",
             detail:"",
             src:"https://www.youtube.com/watch?v=akDSYR8UQC0&t=1177s"
         },
         {
+            id:2,
             img:adMad,
             title:"Gangajal Deo",
             detail:"",
             src:"https://www.youtube.com/watch?v=eatkduXz9Bg&t=152s"
         },
         {
+            id:3,
             img:darKhauff,
             title:"Darr, Khauf, Bandish",
             detail:"",
             src:"https://www.youtube.com/watch?v=tyDeOtDz7Do"
         },
         {
+            id:4,
             img:mime ,
             title:"Mime",
             detail:"",
             src:"https://www.youtube.com/watch?v=-JLk_D56-6U&t=70s"
         },
         {
+            id:5,
             img:mahamedia,
             title:"Mahamedia",
             detail:"",
             src:"https://www.youtube.com/watch?v=lOQ8sHZfUSE"
         },
         {
+            id:6,
             img:oneact,
             title:"28 seconds",
             detail:"",
             src:"https://www.youtube.com/watch?v=-YEujt7VKIw&t=1362s"
         },
         {
+            id:7,
             img: jannatkijung,
             title:"Jannat ki Jung",
             detail:"",
@@ -157,7 +164,7 @@ const GalleryVideos = () => {
                 {
                     videos.map(video=>{
                         return(
-                            <section>
+                            <section  data-aos="fade-up" data-aos-duration={300} data-aos-once={true}>
                                 <span>
                                     <img src={video.img} alt={video.title}/>
                                     <a href={video.src} target="_blank" rel="noreferrer" className={classes.links}>

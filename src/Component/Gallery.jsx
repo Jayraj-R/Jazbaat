@@ -47,7 +47,7 @@ const Gallery = () => {
 
     return (
         <Grid container xs={12} className={classes.root} justify="center" alignContent="center">
-            <Grid container xs={12} justify="left" className={classes.header}>
+            <Grid container xs={12} justify="left" className={classes.header}  data-aos="fade-up" data-aos-duration={600} aos-delay={200}>
                 <span>
                     <ParallaxHeader
                         title="Gallery"
@@ -57,7 +57,7 @@ const Gallery = () => {
                 </span>
             </Grid>
 
-                <Grid container xs={10} sm={8} lg={6} className={classes.carousel} justify="center" alignContent="center" gutterBottom> 
+                <Grid container xs={10} sm={8} lg={6} className={classes.carousel}  data-aos="zoom-out" data-aos-duration={600} aos-delay={200} justify="center" alignContent="center" gutterBottom> 
                     <GalleryCaraousel/>
                 </Grid>
 

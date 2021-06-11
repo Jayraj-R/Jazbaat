@@ -100,7 +100,7 @@ const TeamCard = (props) => {
 
     return (
         <div>
-            <Paper className={classes.paper}>
+            <Paper className={classes.paper} data-aos="zoom-out" data-aos-duration={600} aos-delay={200}>
                 <Grid container xs={12} className={classes.root} justify="center" alignContent="center">
                     <Grid container xs={11} sm={6} justify="center" alignContent="center">
                         

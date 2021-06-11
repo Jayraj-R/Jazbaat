@@ -42,7 +42,7 @@ const ParallaxQuotes = (props) => {
                 
                 <Grid xs={12} container justify="center" className={classes.container}>
                     <Grid xs={11} sm={6} >
-                        <Typography color="secondary" variant="h4" gutterBottom className={classes.quote}>
+                        <Typography color="secondary" variant="h4" gutterBottom className={classes.quote}  data-aos="zoom-out" data-aos-duration={600} aos-delay={200}>
                             {props.quote}
                         </Typography>
                     </Grid>
