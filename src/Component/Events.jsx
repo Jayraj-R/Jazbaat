@@ -50,20 +50,20 @@ const Events = () => {
     const events = [
         {
             id:1,
-            title:"Nukkad - Natak",
-            caption: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam nobis rerum nihil corrupti cupiditate hic?",
+            title:"Nukkad Natak",
+            caption: "Used to convey a profound message to through the rawest form of acting, Nukkad is a form of theatrical performance in an outdoor public spaces.",
             img: eventNukkad
         },
         {
-            id:3,
+            id:2,
             title:"Stage Play",
-            caption: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam nobis rerum nihil corrupti cupiditate hic?",
+            caption: "A one-act play is a play that has only one act, as distinct from plays that occur over a span of several act.",
             img: eventStagePlay
         },
         {
-            id:1,
+            id:3,
             title:"Monoact",
-            caption: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam nobis rerum nihil corrupti cupiditate hic?",
+            caption: "The monoact is a scene with only one person physically present who acts and reacts a monologues scene.",
             img: eventMonoact
         }
     ]

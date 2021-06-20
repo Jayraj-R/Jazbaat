@@ -1,7 +1,7 @@
 import { makeStyles, Typography, Grid, Paper } from '@material-ui/core'
 import React from 'react'
-import FacebookIcon from '@material-ui/icons/Facebook';
-import InstagramIcon from '@material-ui/icons/Instagram';
+import MailIcon from '@material-ui/icons/Mail';
+import LinkedInIcon from '@material-ui/icons/LinkedIn';
 
 
 const useStyles = makeStyles({
@@ -100,7 +100,7 @@ const TeamCard = (props) => {
 
     return (
         <div>
-            <Paper className={classes.paper} data-aos="zoom-out" data-aos-duration={600} aos-delay={200}>
+            <Paper className={classes.paper}data-aos={props.id%2!==0 ? `fade-right` : `fade-left`} data-aos-duration={600} aos-delay={200}>
                 <Grid container xs={12} className={classes.root} justify="center" alignContent="center">
                     <Grid container xs={11} sm={6} justify="center" alignContent="center">
                         
@@ -116,8 +116,8 @@ const TeamCard = (props) => {
                                     </Typography>
                                 </span>
                                 <ul>
-                                    <li><a href={props.fb}  target="_blank" rel="noreferrer"><FacebookIcon color="secondary"/></a></li>
-                                    <li><a href={props.insta} target="_blank" rel="noreferrer"><InstagramIcon color="secondary"/></a></li>
+                                    <li><a href={props.linkedin}  target="_blank" rel="noreferrer"><LinkedInIcon color="secondary"/></a></li>
+                                    <li><a href={`mailto:${props.mail}`} ><MailIcon color="secondary"/></a></li>
                                 </ul>
                             </div>
                         </div>

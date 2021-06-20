@@ -1,6 +1,7 @@
 import React from 'react'
 import Navbar from './Navbar'
-import { Grid } from '@material-ui/core'
+import { Grid } from '@material-ui/core';
+import About from './About';
 import Events from './Events'
 import Gallery from './Gallery'
 import ParallaxQuotes from './ParallaxQuotes';
@@ -24,8 +25,11 @@ const Layout = () => {
 
             {/* intro text & book button */}
             <Grid container xs={12} data-aos="zoom-out" data-aos-duration={600} aos-delay={600} className="intro-text" justify="center" alignContent="center">
-                <Grid item xs={10} sm={8} md={6} lg={5}>
+                <Grid item xs={8} sm={6} md={4} lg={3}>
                     <img className="main-logo" src={logo} alt="Jazzbaat"/>
+                </Grid>
+                <Grid item xs={12}>
+                    <About/>
                 </Grid>
             </Grid>
             

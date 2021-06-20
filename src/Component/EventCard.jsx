@@ -35,28 +35,32 @@ const useStyles = makeStyles({
         position:'relative',
         height:"30em",
         width:"45em",
-        background:"rgba(74, 74, 74,0.4)",
+        background:"rgba(74, 74, 74,0.6)",
         float:"right",
         color:"#fef9f0",
         display:"flex",
         flexDirection:"column",
         justifyContent:"center",
-        padding:"0em 8em",
+        padding:"0em 7em",
+        overflow:"ellipses",
         '@media only screen and (max-width : 480px)': {
             width:"18em",
             height:"18em",
-            padding:"0em 2em",
+            padding:"0em 0.5em",
         },
         '@media only screen and (min-device-width: 768px) and (max-width : 1199px)': {
             width:"30%",
-            padding:"0em 2em",
+            padding:"0em 0.5em",
         },
     },
     title:{
         position:"relative",
         top:"-100%",
         
-    }
+    },
+    caption:{
+        
+    },
 });
 
 
@@ -65,7 +69,7 @@ const EventCard = (props) => {
     return (
         <div>
 
-            <Grid container xs={12} className={classes.root} justify="center" alignContent="center" data-aos={props.id%2==0 ? `fade-right` : `fade-left`} data-aos-duration={600} aos-delay={200}>
+            <Grid container xs={12} className={classes.root} justify="center" alignContent="center" data-aos={props.id%2===0 ? `fade-right` : `fade-left`} data-aos-duration={600} aos-delay={200}>
                 
                 <Grid container xs={11} sm={8} className={classes.cards} justify="center" alignContent="center">
                     <Grid className={classes.root} xs={12} sm={10} container justify="center" alignContent="center">

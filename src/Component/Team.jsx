@@ -1,9 +1,10 @@
-import { makeStyles, Typography, Grid } from '@material-ui/core'
+import { makeStyles, Grid } from '@material-ui/core'
 import React from 'react'
 import TeamCard from './TeamCard';
-import ParallaxHeader from './ParallaxHeader'
 import Cordinator from '../media/Cordinator.jpg'
 import CoCordinator from '../media/CoCordinator.jpeg'
+import fic1 from '../media/fic1.jpg'
+import fic2 from '../media/fic2.png'
 
 const useStyles = makeStyles({
     root:{
@@ -23,26 +24,43 @@ const Team = () => {
     const members = [
         {
             id:1,
-            title:"Cordinator",
-            name: "Ratnesh Dubey",
-            img:Cordinator,
-            insta:"https://www.instagram.com/i_m_ratnesh/",
-            fb:"https://www.facebook.com/ratnesh.dubey.900388"
+            title:"Faculty Incharge",
+            name: "Harpreet Singh",
+            img:fic1,
+            mail:"hps.dme@iiitdmj.ac.in",
+            linkedin:"https://www.linkedin.com/in/dr-harpreet-singh-01ba7180/"
 
         },
         {
+            id:2,
+            title:"Faculty Incharge",
+            name: "Kusum Kumari Bharti",
+            img:fic2,
+            mail:"kusum@iiitdmj.ac.in",
+            linkedin:"https://www.linkedin.com/in/kusum-kumari-bharti-10598627/?miniProfileUrn=urn%3Ali%3Afs_miniProfile%3AACoAAAWpTRUB7dzPmEVc29zzT6Vm6OvvdHDd_3I"
+        },
+        {
             id:3,
+            title:"Cordinator",
+            name: "Ratnesh Dubey",
+            img:Cordinator,
+            mail:"jazbaat@iiitdmj.ac.in",
+            linkedin:"https://www.linkedin.com/in/ratnesh-dubey/"
+
+        },
+        {
+            id:4,
             title:"Co-Cordinator",
             name: "Rahul Ojha",
             img:CoCordinator,
-            insta:"https://www.instagram.com/rahulojha96/",
-            fb:"https://www.facebook.com/profile.php?id=100037885392522"
+            mail:"jazbaat@iiitdmj.ac.in",
+            linkedin:"https://www.linkedin.com/in/rahul-ojha-335453193/"
         },
     ]
 
     return (
-        <Grid container xs={12} className={classes.root} justify="center" alignContent="center">
-            <Grid container xs={11} sm={10} xs={12} className={classes.cards} justify="center" alignContent="center">
+        <Grid container xs={10} className={classes.root} justify="center" alignContent="center">
+            <Grid container xs={11} sm={10} className={classes.cards} justify="center" alignContent="center">
                 {
                         members.map(member =>
                             <TeamCard
@@ -50,8 +68,8 @@ const Team = () => {
                                 title={member.title}
                                 name={member.name}
                                 src={member.img}
-                                insta={member.insta}
-                                fb={member.fb}
+                                mail={member.mail}
+                                linkedin={member.linkedin}
                             />
                         )
                 }
